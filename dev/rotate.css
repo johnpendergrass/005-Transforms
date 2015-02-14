@@ -1,0 +1,1019 @@
+/* this project requires CSS3 - 
+   developed and tested on
+   Chrome broswer (windows)
+   only - unsure of how it will 
+   perform on other browsers - 
+   I used generic css terms for all
+   code, rather than the browser
+   specific terminology */
+
+/* START OF COMMON CSS - 
+   THIS IS COMMON TO ALL PAGES -
+   BELOW THIS IS PAGE-SPECIFIC CSS */
+
+html { background: #ddeeee; 
+	 font-family: Georgia, Serif;
+}
+
+
+body {
+	margin: 10px auto 0 auto;
+	padding: 0 0 0 0;
+	width: 1800px;
+	height: 900px;
+	background-color: #ddeeee;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+/* header and content within it,
+   including the logo and site-title */
+
+header {
+	position: relative;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+	width: 1790px;
+	height: 183px;
+	background-color: hsl(0, 0%, 85%);
+	border-bottom: 2px solid hsl(0, 0%, 50%);
+}
+
+#logo {
+	position: relative;
+	z-index: 90;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 300px;
+	height: 183px;
+	background-color: hsl(0, 0%, 85%);
+	box-shadow: 3px 3px 10px hsl(0, 0%, 25%);
+	transform: rotate(-5deg);
+}
+
+#logo-top {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 300px;
+	height: 91px;
+	background-color: hsl(210,100%, 80%);
+}
+
+#logo-bottom {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 300px;
+	height: 92px;
+	background-color: hsl(150, 100%, 80%);
+}
+
+#logo-top h1 {
+	font-family: "Lucida Console", monospace;
+	margin: 0 0 0 0;
+	padding: 15px 0 0 0;
+	text-align: center;
+	font-size: 72px;
+	text-shadow: 2px 2px 8px hsl(0, 0%, 25%);
+}
+
+#logo-bottom h1 {
+	font-family: "Lucida Console", monospace;
+	margin: 0 0 0 0;
+	padding: 45px 0 0 0;
+	text-align: center;
+	font-size: 72px;
+	line-height: 0;
+	text-shadow: 2px 2px 8px hsl(0, 0%, 25%);
+}
+
+#site-title {
+	float: right;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 1490px;
+	height: 183px;
+	background-color: hsl(0, 0%, 85%);
+}
+
+#site-title h1 {
+	display: inline-block;
+	font-family:  Georgia, serif;
+	margin: 0 0 0 0;
+	padding: 30px 0 0 90px;
+	font-size: 60px;
+	text-align: left;
+	text-shadow: 2px 2px 8px hsl(0, 0%, 25%);
+}
+
+#site-nav {
+	display: block;
+	position: absolute;
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 40px;
+	width: 1450px;
+	height: 50px;
+	top: 133px;
+	background-color: hsl(0, 0%, 75%);
+}
+
+#site-nav ul {
+	padding: 0 0 0 100px;
+}
+
+li { 
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0; 
+	font-family: garamond, serif;
+}
+
+#site-nav a {  /* nav bar in header */
+	display: inline-block;
+	margin: 0 0 0 0;
+	padding: 16px 0 16px 0px ;
+	width: 125px;
+	text-align: center;
+	font-family: Georgia, serif;
+	font-size: 18px;
+	color: hsl(0, 0%, 25%);
+}
+
+a:visited {  /* want to keep nav bar same color regardless */
+	color: hsl(0, 0%, 25%);
+}
+
+#rotate {
+	transform: rotate(180deg);
+	transform-origin: center center;
+	transition: all .5s;
+}
+
+#rotate:hover {
+	transform: rotate(0deg);
+}
+
+#scale {
+	transform: scale(1.5);
+	transform-origin: center center;
+	transition: all .5s;
+}
+
+#scale:hover {
+	transform: scale(1.0);
+}
+
+#translate {
+	transform: translate(-25px, -10px);
+	transform-origin: center center;
+	transition: all .5s;
+}
+
+#translate:hover {
+	transform: translate(0px, 0px);
+}
+
+#skew {
+	transform: skew(25deg, 30deg);
+	transform-origin: center center;
+	transition: all .5s;
+}
+
+#skew:hover {
+	transform: skew(0deg, 0deg);
+}
+
+
+
+/* middle section, incl nav, explain box,
+   article (work area), aside (html code 
+   	and css code) */
+
+section {
+	position: relative;  /* need this to do the absolute
+	                        positioning on the various
+	                        cards and other stuff that
+	                        appears on the main stage */
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+	width: 1790px;
+	height: 640px;
+	background-color: hsl(0, 0%, 85%);
+}
+
+#explain {
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 300px;
+	height: 640px;
+	background-color: hsl(0, 0%, 85%);
+}
+
+#explain h1 {
+	margin: 0 0 0 0;
+	padding: 30px 20px 5px 20px;
+	font-family: Georgia, serif;
+	font-size: 48px;
+	text-align: center;
+	color: hsl(0, 0%, 25%);
+	transition: transform 1s ease-in;
+}
+
+#explain h1:hover {
+	transform: rotate(360deg);
+}
+
+#explain h2 {
+	margin: 0 0 0 0;
+	padding: 0px 20px 20px 20px;
+	font-family: Georgia, serif;
+	font-size: 24px;
+	text-align: center;
+	color: hsl(0, 0%, 25%);
+}
+
+#explain p {
+	margin: 0 0 0 0;
+	padding: 0 20px 0 30px;
+	font-family: Georgia, serif;
+	font-size: 16px;
+	line-height: 125%;
+	color: hsl(0, 0%, 25%);
+}
+
+
+article {  /* aka "#main-stage" - this is the area where 
+              most of the actual action takes place */
+    position: relative;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 900px;
+	height: 640px;
+	/* nice felt background */
+	background-image: url("../resources/rotate/felt-900x640.png");
+}
+
+aside { /* where code is displayed */
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 590px;
+	height: 640px;
+	background-color: hsl(0, 0%, 95%);
+}
+
+#html-code {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 590px;
+	height: 320px;
+	background-color: hsl(210, 100%, 80%);
+}
+
+
+#css-code {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 590px;
+	height: 320px;
+	background-color: hsl(150, 100%, 80%);
+}
+
+#html-code h3 {
+	margin: 0 0 0 0;
+	padding: 5px 0 10px 5px;
+	display: block;
+	font-family: "Lucida Console", sans-serif;
+	font-size: 18px;
+	text-align: left;
+	color: hsl(0, 0%, 25%);
+}
+
+#html-code p {
+	margin: 0 0 0 0;
+	padding: 0 20px 0 30px;
+	font-family: "Lucida Console", sans-serif;
+	font-size: 15px;
+	line-height: 125%;
+	color: hsl(0, 0%, 25%);
+}
+
+#css-code h3 {
+	margin: 0 0 0 0;
+	padding: 5px 0 10px 5px;
+	display: block;
+	font-family: "Lucida Console", sans-serif;
+	font-size: 18px;
+	text-align: left;
+	color: hsl(0, 0%, 25%);
+}
+
+#css-code p {
+	margin: 0 0 0 0;
+	padding: 0 20px 0 30px;
+	font-family: "Lucida Console", sans-serif;
+	font-size: 15px;
+	line-height: 125%;
+	color: hsl(0, 0%, 25%);
+}
+
+
+/* footer for page, other links */
+
+footer {
+	margin: 0 auto 0 auto;
+	padding: 20px 0 0 30px;
+	width: 1760px;
+	height: 68px;
+	background-color: hsl(0, 0%, 95%);
+	border-top: 2px solid hsl(0, 0%, 50%);
+}
+
+footer p {
+	display: inline-block;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-family: Georgia, serif;
+	font-size: 16px;
+	color: hsl(0, 0%, 25%);
+}
+
+footer a {
+	display: inline-block;
+	margin: 0 0 0 0;
+	padding: 0 10px 0 5px;
+	font-family: Georgia, serif;
+	font-variant: bold;
+	font-size: 16px;
+	color: hsl(0, 0%, 25%);
+}
+
+
+/* END OF CSS COMMON TO ALL PAGES -
+   BELOW THIS IS PAGE SPECIFIC CSS */
+
+
+
+
+
+/* ROTATE PAGE STUFF (ie. deck of cards) */
+
+
+/* this is the top red back card
+   it disappears, and then 
+   reappears at end */
+
+article:hover #redback {
+	opacity: 0;
+	transition-delay: .2s;
+}
+
+
+#redback {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: center center;
+	transition: all 1s ease-out 3s;
+}
+
+
+/* this positions each of 52 cards, and sets the
+   rotation transition specs.  The on-hover
+   for each card is below this */
+
+
+#card01 {
+	position: absolute;
+	left: 367px;   /* 450 - (1/2 of 165) */
+ 	top: 80px;    /* 320 - 240 */
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card02 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card03 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card04 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card05 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card06 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card07 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card08 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card09 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card10 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card11 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card12 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card13 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card14 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card15 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card16 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card17 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card18 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card19 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card20 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card21 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card22 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card23 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card24 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card25 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card26 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card27 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card28 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card29 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card30 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card31 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card32 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card33 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card34 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card35 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card36 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card37 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card38 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card39 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card40 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card41 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card42 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card43 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card44 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card45 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card46 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card47 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card48 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card49 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card50 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card51 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+#card52 {
+	position: absolute;
+	left: 367px;
+	top: 80px;
+	transform-origin: bottom center;
+	transition: 2s ease-out 1s;
+}
+
+
+/* this is the on-hover rotations
+   of each of the cards.  */
+
+article:hover #card01 {
+	transform: rotate(24deg);
+}
+
+article:hover #card02 {
+	transform: rotate(30deg);
+}
+
+article:hover #card03 {
+	transform: rotate(36deg);
+}
+
+article:hover #card04 {
+	transform: rotate(42deg);
+}
+
+article:hover #card05 {
+	transform: rotate(48deg);
+}
+
+article:hover #card06 {
+	transform: rotate(54deg);
+}
+
+article:hover #card07 {
+	transform: rotate(60deg);
+}
+
+article:hover #card08 {
+	transform: rotate(66deg);
+}
+
+article:hover #card09 {
+	transform: rotate(72deg);
+}
+
+article:hover #card10 {
+	transform: rotate(78deg);
+}
+
+article:hover #card11 {
+	transform: rotate(84deg);
+}
+
+article:hover #card12 {
+	transform: rotate(90deg);
+}
+
+article:hover #card13 {
+	transform: rotate(96deg);
+}
+
+article:hover #card14 {
+	transform: rotate(102deg);
+}
+
+article:hover #card15 {
+	transform: rotate(108deg);
+}
+
+article:hover #card16 {
+	transform: rotate(114deg);
+}
+
+article:hover #card17 {
+	transform: rotate(120deg);
+}
+
+article:hover #card18 {
+	transform: rotate(126deg);
+}
+
+article:hover #card19 {
+	transform: rotate(132deg);
+}
+
+article:hover #card20 {
+	transform: rotate(138deg);
+}
+
+article:hover #card21 {
+	transform: rotate(144deg);
+}
+
+article:hover #card22 {
+	transform: rotate(150deg);
+}
+
+article:hover #card23 {
+	transform: rotate(156deg);
+}
+
+article:hover #card24 {
+	transform: rotate(162deg);
+}
+
+article:hover #card25 {
+	transform: rotate(168deg);
+}
+
+article:hover #card26 {
+	transform: rotate(174deg);
+}
+
+article:hover #card27 {
+	transform: rotate(180deg);
+}
+
+article:hover #card28 {
+	transform: rotate(186deg);
+}
+
+article:hover #card29 {
+	transform: rotate(192deg);
+}
+
+article:hover #card30 {
+	transform: rotate(198deg);
+}
+
+article:hover #card31 {
+	transform: rotate(204deg);
+}
+
+article:hover #card32 {
+	transform: rotate(210deg);
+}
+
+article:hover #card33 {
+	transform: rotate(216deg);
+}
+
+article:hover #card34 {
+	transform: rotate(222deg);
+}
+
+article:hover #card35 {
+	transform: rotate(228deg);
+}
+
+article:hover #card36 {
+	transform: rotate(234deg);
+}
+
+article:hover #card37 {
+	transform: rotate(240deg);
+}
+
+article:hover #card38 {
+	transform: rotate(246deg);
+}
+
+article:hover #card39 {
+	transform: rotate(252deg);
+}
+
+article:hover #card40 {
+	transform: rotate(258deg);
+}
+
+article:hover #card41 {
+	transform: rotate(264deg);
+}
+
+article:hover #card42 {
+	transform: rotate(270deg);
+}
+
+article:hover #card43 {
+	transform: rotate(276deg);
+}
+
+article:hover #card44 {
+	transform: rotate(282deg);
+}
+
+article:hover #card45 {
+	transform: rotate(288deg);
+}
+
+article:hover #card46 {
+	transform: rotate(294deg);
+}
+
+article:hover #card47 {
+	transform: rotate(300deg);
+}
+
+article:hover #card48 {
+	transform: rotate(306deg);
+}
+
+article:hover #card49 {
+	transform: rotate(312deg);
+}
+
+article:hover #card50 {
+	transform: rotate(318deg);
+}
+
+article:hover #card51 {
+	transform: rotate(324deg);
+}
+
+article:hover #card52 {
+	transform: rotate(330deg);
+}

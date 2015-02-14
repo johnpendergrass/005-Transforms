@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<!-- this project requires 
+	 html5 - developed and 
+	 tested on Chrome broswer 
+	(windows) only
+-->
+
+<head>
+	<title>html5/css3 transitions, transforms</title>
+	<link rel="stylesheet" href="rotate.css">
+</head>
+
+<body>
+	<header>
+
+		<div id="logo">
+			
+			<div id="logo-top">
+				<h1>html5</h1>
+			</div>
+
+			<div id="logo-bottom">
+				<h1>&#32;&#32;css3</h1>
+			</div>
+			
+		</div>
+
+		<div id="site-title">
+			
+			<h1>Learning a bit about... TRANSFORMS</h1>
+			
+			<nav id="site-nav">
+				<ul>
+					<li><a id="index" href="index.html">Home</a></li>
+					<li><a id="rotate" href="rotate.html">Rotate</a></li>
+					<li><a id="scale" href="scale.html">Scale</a></li>
+					<li><a id="translate" href="translate.html">Translate</a></li>
+					<li><a id="skew" href="skew.html">Skew</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+
+
+	</header>
+
+
+
+	<section>
+
+		<aside id="explain">
+			<ul>
+				<h1>ROTATE</h1>
+				<h2>(2D transform)</h2>
+				<br>
+				<p>The 'rotate' transform is used to apply 2D rotation to a screen element.</p>
+				<br>
+				<p>Format: 'transform: rotate(90deg);'</p>
+				<br>
+				<p>If applied directly to the element the transform takes place immediately.</p>
+				<br>
+				<p>If applied to a 'transistion' (ie. :hover or such) to the element, it will be animated according to the transition properties.</p>
+				<br>
+				<p>The cards on the right each have a unique 'rotate' and transition applied to them, resulting in the card fanning animation.  See the 'html' and 'css' code for details.</p>
+			</ul>
+		</aside>
+
+
+		<article id:"main-stage">
+
+			<img id="card01" src="../resources/rotate/cards-165x240/ace-of-hearts.png" alt="ace of hearts">
+			<img id="card02" src="../resources/rotate/cards-165x240/2-of-hearts.png" alt="2 of hearts">
+			<img id="card03" src="../resources/rotate/cards-165x240/3-of-hearts.png" alt="3 of hearts">
+			<img id="card04" src="../resources/rotate/cards-165x240/4-of-hearts.png" alt="4 of hearts">
+			<img id="card05" src="../resources/rotate/cards-165x240/5-of-hearts.png" alt="5 of hearts">
+			<img id="card06" src="../resources/rotate/cards-165x240/6-of-hearts.png" alt="6 of hearts">
+			<img id="card07" src="../resources/rotate/cards-165x240/7-of-hearts.png" alt="7 of hearts">
+			<img id="card08" src="../resources/rotate/cards-165x240/8-of-hearts.png" alt="8 of hearts">
+			<img id="card09" src="../resources/rotate/cards-165x240/9-of-hearts.png" alt="9 of hearts">
+			<img id="card10" src="../resources/rotate/cards-165x240/10-of-hearts.png" alt="10 of hearts">
+			<img id="card11" src="../resources/rotate/cards-165x240/jack-of-hearts.png" alt="jack of hearts">
+			<img id="card12" src="../resources/rotate/cards-165x240/queen-of-hearts.png" alt="queen of hearts"> 
+			<img id="card13" src="../resources/rotate/cards-165x240/king-of-hearts.png" alt="king of hearts"> 		
+			
+			<img id="card14" src="../resources/rotate/cards-165x240/ace-of-clubs.png" alt="ace of clubs">
+			<img id="card15" src="../resources/rotate/cards-165x240/2-of-clubs.png" alt="2 of clubs">
+			<img id="card16" src="../resources/rotate/cards-165x240/3-of-clubs.png" alt="3 of clubs">
+			<img id="card17" src="../resources/rotate/cards-165x240/4-of-clubs.png" alt="4 of clubs">
+			<img id="card18" src="../resources/rotate/cards-165x240/5-of-clubs.png" alt="5 of clubs">
+			<img id="card19" src="../resources/rotate/cards-165x240/6-of-clubs.png" alt="6 of clubs">
+			<img id="card20" src="../resources/rotate/cards-165x240/7-of-clubs.png" alt="7 of clubs">
+			<img id="card21" src="../resources/rotate/cards-165x240/8-of-clubs.png" alt="8 of clubs">
+			<img id="card22" src="../resources/rotate/cards-165x240/9-of-clubs.png" alt="9 of clubs">
+			<img id="card23" src="../resources/rotate/cards-165x240/10-of-clubs.png" alt="10 of clubs">
+			<img id="card24" src="../resources/rotate/cards-165x240/jack-of-clubs.png" alt="jack of clubs">
+			<img id="card25" src="../resources/rotate/cards-165x240/queen-of-clubs.png" alt="queen of clubs"> 
+			<img id="card26" src="../resources/rotate/cards-165x240/king-of-clubs.png" alt="king of clubs"> 			
+
+			<img id="card27" src="../resources/rotate/cards-165x240/king-of-diamonds.png" alt="king of diamonds">
+			<img id="card28" src="../resources/rotate/cards-165x240/queen-of-diamonds.png" alt="queen of diamonds">
+			<img id="card29" src="../resources/rotate/cards-165x240/jack-of-diamonds.png" alt="jack of diamonds">
+			<img id="card30" src="../resources/rotate/cards-165x240/10-of-diamonds.png" alt="10 of diamonds">
+			<img id="card31" src="../resources/rotate/cards-165x240/9-of-diamonds.png" alt="9 of diamonds">
+			<img id="card32" src="../resources/rotate/cards-165x240/8-of-diamonds.png" alt="8 of diamonds">
+			<img id="card33" src="../resources/rotate/cards-165x240/7-of-diamonds.png" alt="7 of diamonds">
+			<img id="card34" src="../resources/rotate/cards-165x240/6-of-diamonds.png" alt="6 of diamonds">
+			<img id="card35" src="../resources/rotate/cards-165x240/5-of-diamonds.png" alt="5 of diamonds">
+			<img id="card36" src="../resources/rotate/cards-165x240/4-of-diamonds.png" alt="5 of diamonds">
+			<img id="card37" src="../resources/rotate/cards-165x240/3-of-diamonds.png" alt="4 of diamonds">
+			<img id="card38" src="../resources/rotate/cards-165x240/2-of-diamonds.png" alt="2 of diamonds"> 
+			<img id="card39" src="../resources/rotate/cards-165x240/ace-of-diamonds.png" alt="ace of diamonds"> 
+
+			<img id="card40" src="../resources/rotate/cards-165x240/king-of-spades.png" alt="king of spades">
+			<img id="card41" src="../resources/rotate/cards-165x240/queen-of-spades.png" alt="queen of spades">
+			<img id="card42" src="../resources/rotate/cards-165x240/jack-of-spades.png" alt="jack of spades">
+			<img id="card43" src="../resources/rotate/cards-165x240/10-of-spades.png" alt="10 of spades">
+			<img id="card44" src="../resources/rotate/cards-165x240/9-of-spades.png" alt="9 of spades">
+			<img id="card45" src="../resources/rotate/cards-165x240/8-of-spades.png" alt="8 of spades">
+			<img id="card46" src="../resources/rotate/cards-165x240/7-of-spades.png" alt="7 of spades">
+			<img id="card47" src="../resources/rotate/cards-165x240/6-of-spades.png" alt="6 of spades">
+			<img id="card48" src="../resources/rotate/cards-165x240/5-of-spades.png" alt="5 of spades">
+			<img id="card49" src="../resources/rotate/cards-165x240/4-of-spades.png" alt="4 of spades">
+			<img id="card50" src="../resources/rotate/cards-165x240/3-of-spades.png" alt="3 of spades">
+			<img id="card51" src="../resources/rotate/cards-165x240/2-of-spades.png" alt="2 of spades"> 
+			<img id="card52" src="../resources/rotate/cards-165x240/ace-of-spades.png" alt="ace of spades"> 
+
+			<img id="redback" src="../resources/rotate/cards-165x240/red-back.png" alt="red back"> 
+
+		</article>
+
+		<aside id="code">
+
+			<div id="html-code">
+				<h3>html5</h3>
+
+				<ul>
+					<p>....</p>
+					<p>&ltarticle id:"main-stage"&gt</p>
+					<p>&nbsp&nbsp&nbsp&nbsp....</p>
+					<p>&nbsp&nbsp&nbsp&nbsp&ltimg id="card14" src="ace-of-clubs.png" alt="ace"&gt</p>
+					<p>&nbsp&nbsp&nbsp&nbsp&ltimg id="card15" src="2-of-clubs.png" alt="two"&gt</p>
+					<p>&nbsp&nbsp&nbsp&nbsp&ltimg id="card16" src="3-of-clubs.png" alt="three"&gt</p>
+					<p>&nbsp&nbsp&nbsp&nbsp....</p>
+					<p>&nbsp&nbsp&nbsp&nbsp&ltimg id="card50" src="jack-of-spades.png" alt="jack"&gt</p>
+					<p>&nbsp&nbsp&nbsp&nbsp&ltimg id="card51" src="queen-of-spades.png" alt="queen"&gt</p>
+					<p>&nbsp&nbsp&nbsp&nbsp&ltimg id="card52" src="king-of-spades.png" alt="king"&gt</p>
+					<p>&lt/article&gt</p>
+					<p>....</p>
+				</ul>
+
+
+			</div>
+
+			<div id="css-code">
+				<h3>css3</h3>
+
+				<ul>
+					<p>....</p>
+					<p>article {position: relative}</p>
+					<p>....</p>
+					<p>#card14 {</p>
+					<p>&nbsp&nbsp&nbsp&nbspposition: absolute;</p>
+					<p>&nbsp&nbsp&nbsp&nbspleft: 367px;</p>
+ 					<p>&nbsp&nbsp&nbsp&nbsptop: 80px;</p>
+					<p>&nbsp&nbsp&nbsp&nbsptransform-origin: bottom center;</p>
+					<p>&nbsp&nbsp&nbsp&nbsptransition: 2s ease-out 1s;</p>
+					<p>}</p>
+					<p>....</p>
+					<p>article:hover #card14 {</p>
+					<p>&nbsp&nbsp&nbsp&nbsptransform: rotate(102deg);</p>
+					<p>}</p>
+					<p>....</p>
+				</ul>
+
+
+			</div>
+
+		</aside>
+
+	</section>
+
+
+
+
+	<footer>
+		<p>--jp-- Feb 2015, Experimental project #005</p>
+		<br>
+		<p>For more information, go to the</p><a href="about.html">&nbspABOUT&nbsp</a><p>page.</p>
+	</footer>
+
+
+</body>

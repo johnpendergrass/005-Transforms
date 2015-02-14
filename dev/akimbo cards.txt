@@ -1,0 +1,221 @@
+
+/* ====================
+   HERE ARE SLIGHTLY
+   AKIMBO CARDS
+   ====================
+*/
+
+
+article:hover #card01 {
+	transform: rotate(24deg);
+}
+
+article:hover #card02 {
+	transform: rotate(29deg);
+}
+
+article:hover #card03 {
+	transform: rotate(36deg);
+}
+
+article:hover #card04 {
+	transform: rotate(41deg);
+}
+
+article:hover #card05 {
+	transform: rotate(46deg);
+}
+
+article:hover #card06 {
+	transform: rotate(53deg);
+}
+
+article:hover #card07 {
+	transform: rotate(62deg);
+}
+
+article:hover #card08 {
+	transform: rotate(67deg);
+}
+
+article:hover #card09 {
+	transform: rotate(70deg);
+}
+
+article:hover #card10 {
+	transform: rotate(75deg);
+}
+
+article:hover #card11 {
+	transform: rotate(85deg);
+}
+
+article:hover #card12 {
+	transform: rotate(93deg);
+}
+
+article:hover #card13 {
+	transform: rotate(96deg);
+}
+
+article:hover #card14 {
+	transform: rotate(100deg);
+}
+
+article:hover #card15 {
+	transform: rotate(106deg);
+}
+
+article:hover #card16 {
+	transform: rotate(112deg);
+}
+
+article:hover #card17 {
+	transform: rotate(121deg);
+}
+
+article:hover #card18 {
+	transform: rotate(125deg);
+}
+
+article:hover #card19 {
+	transform: rotate(132deg);
+}
+
+article:hover #card20 {
+	transform: rotate(137deg);
+}
+
+article:hover #card21 {
+	transform: rotate(144deg);
+}
+
+article:hover #card22 {
+	transform: rotate(150deg);
+}
+
+article:hover #card23 {
+	transform: rotate(156deg);
+}
+
+article:hover #card24 {
+	transform: rotate(161deg);
+}
+
+article:hover #card25 {
+	transform: rotate(166deg);
+}
+
+article:hover #card26 {
+	transform: rotate(171deg);
+}
+
+article:hover #card27 {
+	transform: rotate(179deg);
+}
+
+article:hover #card28 {
+	transform: rotate(185deg);
+}
+
+article:hover #card29 {
+	transform: rotate(194deg);
+}
+
+article:hover #card30 {
+	transform: rotate(196deg);
+}
+
+article:hover #card31 {
+	transform: rotate(202deg);
+}
+
+article:hover #card32 {
+	transform: rotate(209deg);
+}
+
+article:hover #card33 {
+	transform: rotate(215deg);
+}
+
+article:hover #card34 {
+	transform: rotate(222deg);
+}
+
+article:hover #card35 {
+	transform: rotate(228deg);
+}
+
+article:hover #card36 {
+	transform: rotate(236deg);
+}
+
+article:hover #card37 {
+	transform: rotate(243deg);
+}
+
+article:hover #card38 {
+	transform: rotate(247deg);
+}
+
+article:hover #card39 {
+	transform: rotate(252deg);
+}
+
+article:hover #card40 {
+	transform: rotate(256deg);
+}
+
+article:hover #card41 {
+	transform: rotate(261deg);
+}
+
+article:hover #card42 {
+	transform: rotate(271deg);
+}
+
+article:hover #card43 {
+	transform: rotate(275deg);
+}
+
+article:hover #card44 {
+	transform: rotate(281deg);
+}
+
+article:hover #card45 {
+	transform: rotate(286deg);
+}
+
+article:hover #card46 {
+	transform: rotate(294deg);
+}
+
+article:hover #card47 {
+	transform: rotate(299deg);
+}
+
+article:hover #card48 {
+	transform: rotate(303deg);
+}
+
+article:hover #card49 {
+	transform: rotate(310deg);
+}
+
+article:hover #card50 {
+	transform: rotate(316deg);
+}
+
+article:hover #card51 {
+	transform: rotate(321deg);
+}
+
+article:hover #card52 {
+	transform: rotate(326deg);
+}
+
+/* ====================
+   END OF SLIGHTLY
+   AKIMBO CARDS
+   ====================
+*/
