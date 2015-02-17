@@ -10,3 +10,5 @@ shown on the page for reference.
 Will also use this to try to develop effectively designed 
 web pages, that incorporate elements, navigation, fonts, etc...
 to make it an attractive place to visit.
+
+Finished Feb 17, 2015  --jp--

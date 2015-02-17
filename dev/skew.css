@@ -1,0 +1,207 @@
+/* PAGE SPECIFIC CSS */
+
+/* this -css- page should follow the -main.css-
+   page, which holds the generic page 
+   information for the entire project.  These 
+   specfic css pages (rotate.css, translate.css, etc)
+   contain the css code for page specific stuff only
+
+   For instance, the title word is different for each 
+   page, so the transform effect needs to be changed..
+   this is done in the 'title-word:hover' change 
+   below...
+
+   Also, for instance, the background image of the 
+   'article' element (ie. main stage) will be different
+   for each page.  The 'article' change below adds the 
+   background image for each different page...
+
+   The major css code concerns the 'main stage' 
+   (#article), where the main demo of the page
+   is shown.  CSS code here is involved in 
+   setting up a bunch of transforms, used with
+   one or more transitions, to animate the
+   demo.
+ 
+   here are others, each change documented below... */
+
+/* this transforms the title word (ie. 'rotate', 'scale', etc)
+   in the main page title - it works with the main page 
+   #title-word css code */
+
+#title-word:hover {
+	transform: skew(-200deg, -200deg) translate(200px, 95px) scale(1.5, 1.5);
+}
+
+/* this transforms the "#explain H1" word (ie. 'rotate', 'scale', etc)
+   in the #explain section - it works with the "#explain H1" css code */
+
+#explain h1 {  /* this alters the 'skew' word, so it can be
+                  uprighted with the 'hover' transform */
+   transform-origin: center center;
+   transform: skew(180deg, 0) rotate(180deg) translate(0px, -25px);
+   transition: all 2s;
+}
+
+#explain h1:hover {
+	transform: skew(0deg, 0deg) rotate(0deg) translate(0px, 0px);
+}
+
+/* this transforms the two code boxes (html and css)
+   using the appropriate transform */
+
+#html-code:hover {
+	transform: skew(70deg, 0deg) translate(-450px, 0px);
+}
+
+#css-code:hover {
+	transform: skew(-70deg, 0deg) translate(-450px, 0px);
+}
+
+/* -ARTICLE- section (aka 'main-stage') */
+
+/* this sets the background of the 'article' element to
+   the appropriate background image for each page */
+
+article {
+   /* space background */
+   background-image: url(../resources/skew/starfield-900x640.png);
+}
+
+/* this sets the common elements of all sixteen enterprises
+   that come up from the bottom.  It is set so that the
+   odd numbers ships have class .ship-left and the even
+   numbered ships are class .ship-right   */
+
+.ship-left {  /* pre-config the odd numbered ships common specs */
+   position: absolute;
+   top: 700px;
+   left: -350px;
+   transform-origin: center center;
+   transform: skew(0deg) rotate(0deg);
+}
+
+.ship-right { /* pre-config the even numbered ships common specs */
+   position: absolute;
+   top: 700px;
+   left: 900px;
+   transform-origin: center center;
+   transform: skew(0deg) rotate(0deg);
+}
+
+/* sixteen enterprises coming up from bottom-left 
+   and bottom-right of screen - this just sets the
+   transition time for each, so they appear one after
+   the other, rather than all at the same time  */
+
+#enterprise1  { transition: transform 3s ease-in .5s;  }
+#enterprise2  { transition: transform 3s ease-in 1s;   }
+#enterprise3  { transition: transform 3s ease-in 1.5s; }
+#enterprise4  { transition: transform 3s ease-in 2s;   }
+#enterprise5  { transition: transform 3s ease-in 2.5s; }
+#enterprise6  { transition: transform 3s ease-in 3s;   }
+#enterprise7  { transition: transform 3s ease-in 3.5s; }
+#enterprise8  { transition: transform 3s ease-in 4s;   }
+#enterprise9  { transition: transform 3s ease-in 4.5s; }
+#enterprise10 { transition: transform 3s ease-in 5s;   }
+#enterprise11 { transition: transform 3s ease-in 5.5s; }
+#enterprise12 { transition: transform 3s ease-in 6s;   }
+#enterprise13 { transition: transform 3s ease-in 6.5s; }
+#enterprise14 { transition: transform 3s ease-in 7s;   }
+#enterprise15 { transition: transform 3s ease-in 7.5s; }
+#enterprise16 { transition: transform 3s ease-in 8s;   }
+
+/* one top-down enterprise coming up from bottom.
+
+   -- had to modify the transition timing function
+      to a custom bezier, because the scaling
+      (scaling from .50 to 1.50 during transition)
+      caused it to *appear* to slow down during
+      trip... having it accelerate at end with a
+      custom bezier function fixed it */
+
+#enterprise-down {
+   position: absolute;
+   top: 650px;
+   left: 200px;
+   transform-origin: center center;
+   transform: scale(.50, .50);
+   transition: transform 8s cubic-bezier(.9,.12,.86,.67) 1s;
+}
+
+/* launch lots of little enterprises across the screen */
+
+/* this uses all four transforms available... but the -skew- function
+   gives it a bit of a pop - sort of like in the films where the 
+   ship gets squashed when it goes into warp.  Not perfect, but it 
+   is better than no -skew-  */
+
+article:hover #enterprise1 {
+   transform: skew(-35deg) rotate(-5deg) translate(640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise2 {
+   transform: skew(35deg) rotate(5deg) translate(-640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise3 {
+   transform: skew(-35deg) rotate(-5deg) translate(640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise4 {
+   transform: skew(35deg) rotate(5deg) translate(-640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise5 {
+   transform: skew(-35deg) rotate(-5deg) translate(640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise6 {
+   transform: skew(35deg) rotate(5deg) translate(-640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise7 {
+   transform: skew(-35deg) rotate(-5deg) translate(640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise8 {
+   transform: skew(35deg) rotate(5deg) translate(-640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise9 {
+   transform: skew(-35deg) rotate(-5deg) translate(640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise10 {
+   transform: skew(35deg) rotate(5deg) translate(-640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise11 {
+   transform: skew(-35deg) rotate(-5deg) translate(640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise12 {
+   transform: skew(35deg) rotate(5deg) translate(-640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise13 {
+   transform: skew(-35deg) rotate(-5deg) translate(640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise14 {
+   transform: skew(35deg) rotate(5deg) translate(-640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise15 {
+   transform: skew(-35deg) rotate(-5deg) translate(640px, -900px) scale(.5, .05);  
+}
+
+article:hover #enterprise16 {
+   transform: skew(35deg) rotate(5deg) translate(-640px, -900px) scale(.5, .05);  
+}
+
+/* big enterprise coming in from the bottom */
+
+article:hover #enterprise-down {
+   transform: translate(0px, -1500px) scale(1.5, 1.5);  
+}

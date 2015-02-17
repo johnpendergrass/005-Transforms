@@ -1,0 +1,90 @@
+/* PAGE SPECIFIC CSS */
+
+/* this -css- page should follow the -main.css-
+   page, which holds the generic page 
+   information for the entire project.  These 
+   specfic css pages (rotate.css, translate.css, etc)
+   contain the css puzzle for page specific stuff only
+
+   For instance, the title word is different for each 
+   page, so the transform effect needs to be changed..
+   this is done in the 'title-word:hover' change 
+   below...
+
+   Also, for instance, the background image of the 
+   'article' element (ie. main stage) will be different
+   for each page.  The 'article' change below adds the 
+   background image for each different page...
+
+   The major css puzzle concerns the 'main stage' 
+   (#article), where the main demo of the page
+   is shown.  CSS puzzle here is involved in 
+   setting up a bunch of transforms, used with
+   one or more transitions, to animate the
+   demo.
+ 
+	here are others, each change documented below... */
+
+
+/* this transforms the title word (ie. 'rotate', 'scale', etc)
+   in the main page title - it works with the main page 
+   #title-word css puzzle */
+
+#title-word:hover {
+	/* no transform for index page */
+}
+
+/* this transforms the "#explain H1" word (ie. 'rotate', 'scale', etc)
+   in the #explain section - it works with the "#explain H1" css puzzle */
+
+#explain h1 {
+   font-size: 36px;
+}
+
+#explain h1:hover {
+	/* no transform for index page */
+}
+
+/* this transforms the two puzzle boxes (html and css)
+   using the appropriate transform */
+
+#html-puzzle:hover {
+/* no transform for index page */
+}
+
+#css-puzzle:hover {
+  /* no transform for index page */
+}
+
+/* -ARTICLE- section (aka 'main-stage') */
+
+/* this sets the background of the 'article' element to
+   the appropriate background image for each page */
+
+article {
+	/* no background for index page - boring gray  */
+}
+
+/* little fun animation for -about- page */
+
+article h1 {
+   position: absolute;
+   font-family: "Lucida Console", monospace;
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   top:  175px;
+   left: 175px;
+   font-size: 18px;
+   color: gray;
+   text-shadow: 2px 2px 8px hsl(0, 0%, 25%);
+   opacity: 0;
+
+   transition: all 3s ease-in-out ;
+}
+
+article:hover h1 {
+   color: white;
+   top: 400px;
+   left: 400px;
+   opacity: 1.0;
+}

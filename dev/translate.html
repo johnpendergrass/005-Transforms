@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<!-- this project requires html5 - developed and 
+	 tested on Chrome broswer (windows); have tested in 
+	ie11 and FF and it seems to work fine, but beware..
+-->
+
+<head>
+	<title>laba TRANSLATE</title>
+	<!-- index.css is page layout for css common to all pages -->
+	<link rel="stylesheet" href="main.css">
+	<!-- xxxxxx.css is page layout for css to just this page  --> 
+	<link rel="stylesheet" href="translate.css">
+</head>
+
+<body>
+
+	<header> <!-- logo, title, menu of page -->
+
+		<div id="logo">
+			<div id="logo-top">
+				<h1>html5</h1>
+			</div>
+
+			<div id="logo-bottom">
+				<h1>css3</h1>
+			</div>
+		</div>
+
+		<div id="site-title">
+			<h1>Learning a bit about...</h1><h2 id="title-word">translate</h2>
+			
+			<nav id="site-nav">
+				<ul>
+					<li><a id="index" href="index.html">Home</a></li>
+					<li><a id="rotate" href="rotate.html">Rotate</a></li>
+					<li><a id="scale" href="scale.html">Scale</a></li>
+					<li id="selected">Translate</li>
+					<li><a id="skew" href="skew.html">Skew</a></li>
+				</ul>
+			</nav>
+		</div>
+
+	</header>
+
+	<section>  <!-- middle section of page where the action takes place -->
+		
+		<aside id="explain">  <!-- box on left where stuff is explained -->
+			<h1>TRANSLATE</h1>
+
+			<pre>
+One limitation of css -transforms-
+is that they are self-reversing.
+This means that when you stop 
+hovering (or clicking, etc) the 
+effect reverses itself, like time
+running backwards.  It would be 
+nice if you could leave the items
+where they were at end of the
+transform.  Cannot though.
+
+The 'translate' demo has a lot
+of choreography in it. Every card
+(and gold and text) must be 
+positioned and its effect
+timed to have it work out right.
+
+The 'turned up' cards are in-place
+all along - they are just 
+-opacity: 0- until needed, then 
+turned on with -opacity: 1.0-.
+Since the face-up cards are loaded
+after the blue-back cards, they
+appear on top.  There is no need 
+for z-index if you can load the
+files in the proper order.
+			</pre>
+
+		</aside>
+
+		<article id="main-stage"> <!-- main demo area in middle of page -->
+
+			<img id="gold01" class="gold" src="../resources/translate/gold-coin-250x250.png" alt="gold">
+			<img id="gold02" class="gold" src="../resources/translate/gold-coin-187x187.png" alt="gold">
+			<img id="gold03" class="gold" src="../resources/translate/gold-coin-250x250.png" alt="gold">
+			<img id="gold04" class="gold" src="../resources/translate/gold-coin-187x187.png" alt="gold">
+			<img id="gold05" class="gold" src="../resources/translate/gold-coin-250x250.png" alt="gold">
+			<img id="gold06" class="gold" src="../resources/translate/gold-coin-187x187.png" alt="gold">
+			<img id="gold07" class="gold" src="../resources/translate/gold-coin-250x250.png" alt="gold">
+			<img id="gold08" class="gold" src="../resources/translate/gold-coin-187x187.png" alt="gold">  
+
+			<img id="blue-back01" class="blue-back" src="../resources/translate/cards-78x114/blue-back.png" alt="blue-back">
+			<img id="blue-back02" class="blue-back" src="../resources/translate/cards-78x114/blue-back.png" alt="blue-back">
+			<img id="blue-back03" class="blue-back" src="../resources/translate/cards-78x114/blue-back.png" alt="blue-back">
+			<img id="blue-back04" class="blue-back" src="../resources/translate/cards-78x114/blue-back.png" alt="blue-back">
+			<img id="blue-back05" class="blue-back" src="../resources/translate/cards-78x114/blue-back.png" alt="blue-back">
+			<img id="blue-back06" class="blue-back" src="../resources/translate/cards-78x114/10-of-spades.png" alt="blue-back">
+			<img id="blue-back07" class="blue-back" src="../resources/translate/cards-78x114/blue-back.png" alt="blue-back">
+			
+			<img id="jack-of-diamonds" class="cards" src="../resources/translate/cards-78x114/jack-of-diamonds.png" alt="jack">
+			<img id="nine-of-clubs" class="cards" src="../resources/translate/cards-78x114/9-of-clubs.png" alt="nine">
+			<img id="king-of-spades" class="cards" src="../resources/translate/cards-78x114/king-of-spades.png" alt="king">
+			<img id="ace-of-spades" class="cards" src="../resources/translate/cards-78x114/ace-of-spades.png" alt="ace">
+			<img id="queen-of-clubs" class="cards" src="../resources/translate/cards-78x114/queen-of-clubs.png" alt="queen">
+			
+			<h3 id="loser">Damn!</h3>
+			<h3 id="winner">Hoodie Hoo! Blackjack!</h3>
+		
+		</article>
+
+		<aside id="code">  <!-- box on right side where snippets of -html- and -css- code are displayed -->
+
+			<div id="html-code">
+				<h1>html5 snippet</h1>
+				
+				<pre>
+&lt!-- load the gold coins images, the blue-back cards,
+     and all the cards --&gt
+
+&ltarticle id="main-stage"&gt
+  &ltimg id="gold01" class="gold" src="gold-coin-250x250.png"&gt
+     ...
+  &gtimg id="blue-back01" class="bl..bk" src="blue-back.png"&gt
+     ...
+  &ltimg id="j-diamonds" class="cards" src="j-diamonds.png"&gt
+     ...
+&lt/article&gt
+				</pre>
+
+			</div>
+
+			<div id="css-code">
+				<h1>css3 snippet</h1>
+				
+				<pre>
+.cards {  /* common stuff for revealed cards */
+  position: absolute;
+  transform-origin: center center;
+  transition: 1s ease-out .25s;
+  opacity: 0;
+}
+
+#j-diamonds {  /* position j-diamonds */
+   left: 135px;
+   top: 375px;  }
+
+article:hover #j-diamonds { /* reveal */
+   opacity: 1.0;
+   transition-delay: 6s;  }
+				</pre>
+				
+			</div>
+
+		</aside>
+
+	</section>
+
+	<footer>  <!-- footer, huh? -->
+		<p>--jp-- Feb 2015, Experimental project #005</p>
+		<br>
+		<p>For more information, go to the</p><a href="about.html">&nbspABOUT&nbsp</a><p>page.</p>
+	</footer>
+
+
+</body>

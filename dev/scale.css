@@ -1,0 +1,133 @@
+/* PAGE SPECIFIC CSS */
+
+/* this -css- page should follow the -main.css-
+   page, which holds the generic page 
+   information for the entire project.  These 
+   specfic css pages (rotate.css, translate.css, etc)
+   contain the css code for page specific stuff only
+
+   For instance, the title word is different for each 
+   page, so the transform effect needs to be changed..
+   this is done in the 'title-word:hover' change 
+   below...
+
+   Also, for instance, the background image of the 
+   'article' element (ie. main stage) will be different
+   for each page.  The 'article' change below adds the 
+   background image for each different page...
+
+   The major css code concerns the 'main stage' 
+   (#article), where the main demo of the page
+   is shown.  CSS code here is involved in 
+   setting up a bunch of transforms, used with
+   one or more transitions, to animate the
+   demo.
+ 
+   here are others, each change documented below... */
+
+/* this transforms the title word (ie. 'rotate', 'scale', etc)
+   in the main page title - it works with the main page 
+   #title-word css code */
+
+#title-word:hover {
+	transform: scale(3.25, 10.0) translate(75px, 15px);
+}
+
+/* this transforms the "#explain H1" word (ie. 'rotate', 'scale', etc)
+   in the #explain section - it works with the "#explain H1" css code */
+
+#explain h1:hover {
+	transform: scale(0, 0);
+}
+
+/* this transforms the two code boxes (html and css)
+   using the appropriate transform */
+
+#html-code:hover {
+	transform: scale(0.9, 0.9);
+}
+
+#css-code:hover {
+	transform: scale(1.1, 1.1);
+}
+
+/* -ARTICLE- section (aka 'main-stage') */
+
+/* this sets the background of the 'article' element to
+   the appropriate background image for each page */
+
+article {
+   /* train track background */
+   background-image: url(../resources/scale/train-tracks-900x640.png)
+}
+
+/* position the train way back on the tracks, using scale and 
+   position... there are three smokestack puffs that need to
+   be positioned, also set the dirt-bike up to fly through the air */
+
+#train {
+   position: absolute;
+   left: 100px;
+   top: -212px;
+   transform-origin: center center;
+   transform: scale(.05,.05);
+   transition: 4s ease-in-out .5s;
+}
+
+#puff1 {
+   position: absolute;
+   left: 376px;
+   top: 107px;
+   transform-origin: center center;
+   transform: scale(.1,.1);
+   transition: 4s ease-in-out .5s;
+}
+
+#puff2 {
+   position: absolute;
+   left: 376px;
+   top: 125px;
+   transform-origin: center center;
+   transform: scale(.05,.05);
+   transition: 4s ease-in-out .5s;
+}
+
+#puff3 {
+   position: absolute;
+   left: 376px;
+   top: 125px;
+   transform-origin: center center;
+   transform: scale(.05,.05);
+   transition: 4s ease-in-out .5s;
+}
+
+#bike {
+   position: absolute;
+   left: -345px;
+   top: 325px;
+   transform-origin: center center;
+   transform: scale(0.75, 0.75);
+   transition: 6s cubic-bezier(.47,1.13,.93,.93) .5s;
+}
+
+/* transform the train, puffs, dirt bike */
+
+article:hover #train {
+   transform: translate(20px, 25px) scale(1.15, 0.8);
+}
+
+article:hover #puff1 {
+   transform: translate(10px, -900px) scale(1.0, 1.0);
+}
+
+article:hover #puff2 {
+   transform: translate(20px, -700px) scale(1.0, 1.0);
+}
+
+article:hover #puff3 {
+   transform: translate(20px, -400px) scale(1.0, 1.0);
+}
+
+article:hover #bike {
+   transform: translate(5000px, -1000px) scale(2.0, 2.0);
+}

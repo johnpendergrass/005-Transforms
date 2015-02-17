@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<!-- this project requires html5 - developed and 
+	 tested on Chrome broswer (windows); have tested in 
+	ie11 and FF and it seems to work fine, but beware..
+-->
+
+<head>
+	<title>laba SCALE</title>
+	<!-- index.css is page layout for css common to all pages -->
+	<link rel="stylesheet" href="main.css">
+	<!-- xxxxxx.css is page layout for css to just this page  --> 
+	<link rel="stylesheet" href="scale.css">
+</head>
+
+<body>
+
+	<header> <!-- logo, title, menu of page -->
+
+		<div id="logo">
+			<div id="logo-top">
+				<h1>html5</h1>
+			</div>
+
+			<div id="logo-bottom">
+				<h1>css3</h1>
+			</div>
+		</div>
+
+		<div id="site-title">
+			<h1>Learning a bit about...</h1><h2 id="title-word">scale</h2>
+			
+			<nav id="site-nav">
+				<ul>
+					<li><a id="index" href="index.html">Home</a></li>
+					<li><a id="rotate" href="rotate.html">Rotate</a></li>
+					<li id="selected">Scale</li>
+					<li><a id="translate" href="translate.html">Translate</a></li>
+					<li><a id="skew" href="skew.html">Skew</a></li>
+				</ul>
+			</nav>
+		</div>
+
+	</header>
+
+	<section>  <!-- middle section of page where the action takes place -->
+		
+		<aside id="explain">  <!-- box on left where stuff is explained -->
+			<h1>SCALE</h1>
+
+			<pre>
+The dirt bike doesn't work so well.
+I wanted it to seem to roar past, 
+just missing the train.
+
+The train demo uses both -scale-
+and -translate- on all items
+(train, puffs of smoke, dirt bike).
+The train has to move down the 
+tracks (using a y axis translate), 
+the puffs of smoke must appear to 
+rise, etc.
+
+The puffs of smoke are intially 
+hidden behind the train, and only 
+appear when their y axis translate
+clears the train.
+
+The word -SCALE- above shows that
+if you set the scale to -0- then
+the oject effectively disappears.
+
+			</pre>
+			
+		</aside>
+
+		<article id="main-stage"> <!-- main demo area in middle of page -->
+
+			<img id="puff1" src="../resources/scale/puff-150x200.png" alt="puff of smoke">
+			<img id="puff2" src="../resources/scale/puff-150x200.png" alt="puff of smoke">
+			<img id="puff3" src="../resources/scale/puff-150x200.png" alt="puff of smoke">
+			<img id="train" src="../resources/scale/train-700x900.png" alt="thomas the tank engine">
+			<img id="bike" src="../resources/scale/dirt-bike-400x300.png" alt="dirt bike">
+		
+		</article>
+
+		<aside id="code">  <!-- box on right side where snippets of -html- and -css- code are displayed -->
+
+			<div id="html-code">
+				<h1>html5 snippet</h1>
+				
+				<pre>
+&lt!-- these are all the images loaded for
+     the main stage demo --&gt
+
+&ltarticle id="main-stage">
+  &ltimg id="puff1" src="puff-150x200.png"&gt
+  &ltimg id="puff2" src="puff-150x200.png"&gt
+  &ltimg id="puff3" src="puff-150x200.png"&gt
+  &ltimg id="train" src="train-700x900.png"&gt
+  &ltimg id="bike" src="dirt-bike-400x300.png"&gt
+&lt/article&gt
+				</pre>
+
+			</div>
+
+			<div id="css-code">
+				<h1>css3 snippet</h1>
+				
+				<pre>
+/* load train very small (.05 scale) */
+
+#train {
+   position: absolute;
+   left: 100px;
+   top: -212px;
+   transform-origin: center center;
+   transform: scale(.05,.05);
+   transition: 4s ease-in-out .5s;
+}
+
+article:hover #train {  /* make big and move down */
+   transform: translate(20px, 25px) scale(1.15, 0.8);
+}
+				</pre>
+
+			</div>
+
+		</aside>
+
+	</section>
+
+	<footer>  <!-- footer, huh? -->
+		<p>--jp-- Feb 2015, Experimental project #005</p>
+		<br>
+		<p>For more information, go to the</p><a href="about.html">&nbspABOUT&nbsp</a><p>page.</p>
+	</footer>
+
+
+</body>

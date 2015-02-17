@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<!-- this project requires html5 - developed and 
+	 tested on Chrome broswer (windows); have tested in 
+	ie11 and FF and it seems to work fine, but beware..  
+-->
+
+<head>
+	<title>laba HOME PAGE</title>
+	<!-- main.css is page layout for css common to all pages -->
+	<link rel="stylesheet" href="main.css">
+	<!-- xxx.css is page layout for css to just this page  --> 
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+	<header> <!-- logo, title, menu of page -->
+
+		<div id="logo">
+			<div id="logo-top">
+				<h1>html5</h1>
+			</div>
+
+			<div id="logo-bottom">
+				<h1>css3</h1>
+			</div>
+
+		</div>
+
+		<div id="site-title">
+			<h1>Learning a bit about...</h1><h2 id="title-word">css transforms</h2>
+			
+			<nav id="site-nav">
+				<ul>
+					<li id="selected">Home</li>
+					<li><a id="rotate" href="rotate.html">Rotate</a></li>
+					<li><a id="scale" href="scale.html">Scale</a></li>
+					<li><a id="translate" href="translate.html">Translate</a></li>
+					<li><a id="skew" href="skew.html">Skew</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+	</header>
+
+	<section>  <!-- middle section of page where the action takes place -->
+		
+		<aside id="explain">  <!-- box on left where stuff is explained -->
+			<h1>css 2D Transforms</h1> 
+
+			<pre>
+OK, I know you really want to 
+click in those squares and move 
+the puzzle pieces around.
+
+But that's not gonna happen.
+
+This site is strictly -html5- and
+-css3-, with no javascript or other 
+code.  So just clicking and hovering. 
+
+Not even those funny little css3
+'@' things, which appear to offer
+an intriguing mix of animation and 
+other possibilities.
+
+This is also just the 2D tranforms.
+There are bunch of 3D ones that 
+are not used in this project.
+
+So, no real interactivity here -
+unless you count 'hovering'... 
+
+I hope you enjoy these demos.
+			</pre>
+
+		</aside>
+
+		<article id="main-stage"> <!-- main demo area in middle of page -->
+			
+			<div id="puzzle">
+				<img id="puzzle-01" class="puzzle" src="../resources/index/puzzle-01.png" alt="puzzle">
+				<img id="puzzle-02" class="puzzle" src="../resources/index/puzzle-02.png" alt="puzzle">
+				<img id="puzzle-03" class="puzzle" src="../resources/index/puzzle-03.png" alt="puzzle">
+				<img id="puzzle-04" class="puzzle" src="../resources/index/puzzle-04.png" alt="puzzle">
+				<img id="puzzle-05" class="puzzle" src="../resources/index/puzzle-05.png" alt="puzzle">
+				<img id="puzzle-06" class="puzzle" src="../resources/index/puzzle-06.png" alt="puzzle">
+				<img id="puzzle-07" class="puzzle" src="../resources/index/puzzle-07.png" alt="puzzle">
+				<img id="puzzle-08" class="puzzle" src="../resources/index/puzzle-08.png" alt="puzzle">
+				<img id="puzzle-09" class="puzzle" src="../resources/index/puzzle-09.png" alt="puzzle">
+				<img id="puzzle-10" class="puzzle" src="../resources/index/puzzle-10.png" alt="puzzle">
+				<img id="puzzle-11" class="puzzle" src="../resources/index/puzzle-11.png" alt="puzzle">
+				<img id="puzzle-12" class="puzzle" src="../resources/index/puzzle-12.png" alt="puzzle">
+				<img id="puzzle-13" class="puzzle" src="../resources/index/puzzle-13.png" alt="puzzle">
+				<img id="puzzle-14" class="puzzle" src="../resources/index/puzzle-14.png" alt="puzzle">
+				<img id="puzzle-15" class="puzzle" src="../resources/index/puzzle-15.png" alt="puzzle">
+				<!-- not using 16 - this is the blank square
+				<img id="puzzle-16" class="puzzle" src="../resources/index/puzzle-16.png" alt="puzzle">
+				-->
+			</div>
+
+		</article>
+
+		<aside id="code">  <!-- box on right side where snippets of -html- and -css- puzzle are displayed -->
+
+			<div id="html-code">
+				<h1>html5 snippet</h1>
+				
+				<pre>
+&lt!-- load puzzle pieces --&gt
+
+&ltdiv id="puzzle"&gt
+  &ltimg id="puzzle-01" class="puzzle" src="puzzle-01.png"&gt
+  &ltimg id="puzzle-02" class="puzzle" src="puzzle-02.png"&gt
+  &ltimg id="puzzle-03" class="puzzle" src="puzzle-03.png"&gt
+  &ltimg id="puzzle-04" class="puzzle" src="puzzle-04.png"&gt
+	...
+  &ltimg id="puzzle-15" class="puzzle" src="puzzle-15.png"&gt
+&lt/div&gt
+				</pre>
+
+			</div>
+
+			<div id="css-code">
+				<h1>css3 snippet</h1>
+				
+				<pre>
+/* puzzle piece 08 - initial position */
+
+#puzzle-08  {
+  top: 254px ;
+  left: 381px ;
+  transition: all .20s linear 4.25s; /* this piece starts
+                                        after 4.25 secs */
+}
+
+/* then move it when hovering over #puzzle element */
+
+#puzzle:hover #puzzle-08 {
+  transform: translate(0px, -127px);
+}
+				</pre>
+				
+			</div>
+
+		</aside>
+
+	</section>
+
+	<footer>  <!-- footer, huh? -->
+		<p>--jp-- Feb 2015, Experimental project #005</p>
+		<br>
+		<p>For more information, go to the</p><a href="about.html">&nbspABOUT&nbsp</a><p>page.</p>
+	</footer>
+
+</body>

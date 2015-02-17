@@ -1,0 +1,261 @@
+/* PAGE SPECIFIC CSS */
+
+/* this -css- page should follow the -main.css-
+   page, which holds the generic page 
+   information for the entire project.  These 
+   specfic css pages (rotate.css, translate.css, etc)
+   contain the css puzzle for page specific stuff only
+
+   For instance, the title word is different for each 
+   page, so the transform effect needs to be changed..
+   this is done in the 'title-word:hover' change 
+   below...
+
+   Also, for instance, the background image of the 
+   'article' element (ie. main stage) will be different
+   for each page.  The 'article' change below adds the 
+   background image for each different page...
+
+   The major css puzzle concerns the 'main stage' 
+   (#article), where the main demo of the page
+   is shown.  CSS puzzle here is involved in 
+   setting up a bunch of transforms, used with
+   one or more transitions, to animate the
+   demo.
+ 
+	here are others, each change documented below... */
+
+
+/* this transforms the title word (ie. 'rotate', 'scale', etc)
+   in the main page title - it works with the main page 
+   #title-word css puzzle */
+
+#title-word:hover {
+	/* no transform for index page */
+}
+
+/* this transforms the "#explain H1" word (ie. 'rotate', 'scale', etc)
+   in the #explain section - it works with the "#explain H1" css puzzle */
+
+#explain h1 {
+   font-size: 36px;
+}
+
+#explain h1:hover {
+	/* no transform for index page */
+}
+
+/* this transforms the two puzzle boxes (html and css)
+   using the appropriate transform */
+
+#html-puzzle:hover {
+/* no transform for index page */
+}
+
+#css-puzzle:hover {
+  /* no transform for index page */
+}
+
+/* -ARTICLE- section (aka 'main-stage') */
+
+/* this sets the background of the 'article' element to
+   the appropriate background image for each page */
+
+article {
+	/* no background for index page - boring gray  */
+}
+
+#puzzle { /* the puzzle box */
+   position: absolute;
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   width: 512px;
+   height: 512px;
+   top: 44px;
+   left: 176px;
+   border-style: solid;
+   border-width: 20px;
+   border-color: black;
+   background-image: url(../resources/index/pizza-512x512.png);
+}
+
+/* puzzle square stuff */ 
+
+.puzzle {  /* common stuff for all the small squares */
+   position: absolute;
+   margin: 0 0 0 0;
+   border: 0 0 0 0;
+   width: 125px;
+   height: 125px;
+   border-style: solid;
+   border-size: 1px;
+   border-color: gray; /* fallback if browser doesn't get
+                          rgba, w transparency  */
+   border-color: rgba(63, 63, 63, .15);
+}
+
+/* each square has a starting location, 
+   and a transition, which mainly
+   choreographs the timing of the
+   puzzle sliding around - see
+   the #puzzle:hover section below
+   for the actual transformations
+   of each puzzle square.  */
+
+#puzzle-02  {
+   top: 0px ;
+   left: 0px ;
+   transition: all .20s linear 1.5s;
+}
+
+#puzzle-06  {
+   top: 0px ;
+   left: 127px ;
+   transition: all .20s linear 1.25s;
+}
+
+#puzzle-07  {
+   top: 0px ;
+   left: 254px ;
+   transition: all .20s linear 3.5s;
+}
+
+#puzzle-03  {
+   top: 0px ;
+   left: 381px ;
+   transition: all .20s linear 3.75s;
+}
+
+#puzzle-01  {
+   top: 127px ;
+   left: 0px ;
+   transition: all .20s linear 1.75s;
+}
+
+#puzzle-10  {
+   top: 127px ;
+   left: 127px ;
+   transition: all .20s linear 1.0s;
+}
+
+#puzzle-11  {
+   top: 127px ;
+   left: 254px  ;
+   transition: all .20s linear 3.25s;
+}
+
+#puzzle-04  {
+   top: 127px ;
+   left: 381px ;
+   transition: all .20s linear 4.0s;
+}
+
+#puzzle-05  {
+   top: 254px ;
+   left: 0px ;
+   transition: all .20s linear 2.0s;
+}
+
+#puzzle-15  {
+   top: 254px ;
+   left: 254px ;
+   transition: all .20s linear 3.0s;
+}
+
+#puzzle-08  {
+   top: 254px ;
+   left: 381px ;
+   transition: all .20s linear 4.25s;
+}
+
+#puzzle-09  {
+   top: 381px ;
+   left: 0px ;
+   transition: all .20s linear 2.25s;
+}
+
+#puzzle-13  {
+   top: 381px ;
+   left: 127px ;
+   transition: all .20s linear 2.50s;
+}
+
+#puzzle-14  {
+   top: 381px ;
+   left: 254px ;
+   transition: all .20s linear 2.75s;
+}
+
+#puzzle-12  {
+   top: 381px ;
+   left: 381px  ;
+   transition: all .20s linear 4.5s;
+}
+
+/* now transform them when hovering */
+
+#puzzle:hover #puzzle-10 {
+   transform: translate(0px, 127px);
+}
+
+#puzzle:hover #puzzle-06 {
+   transform: translate(0px, 127px);
+}
+
+#puzzle:hover #puzzle-02 {
+   transform: translate(127px, 0px);
+}
+
+#puzzle:hover #puzzle-01 {
+   transform: translate(0px, -127px);
+}
+
+#puzzle:hover #puzzle-05 {
+   transform: translate(0px, -127px);
+}
+
+#puzzle:hover #puzzle-09 {
+   transform: translate(0px, -127px);
+}
+
+#puzzle:hover #puzzle-13 {
+   transform: translate(-127px, 0px);
+}
+
+#puzzle:hover #puzzle-14 {
+   transform: translate(-127px, 0px);
+}
+
+#puzzle:hover #puzzle-15 {
+   transform: translate(0px, 127px);
+}
+
+#puzzle:hover #puzzle-11 {
+   transform: translate(0px, 127px);
+}
+
+#puzzle:hover #puzzle-07 {
+   transform: translate(0px, 127px);
+}
+
+#puzzle:hover #puzzle-03 {
+   transform: translate(-127px, 0px);
+}
+
+#puzzle:hover #puzzle-04 {
+   transform: translate(0px, -127px);
+}
+
+#puzzle:hover #puzzle-08 {
+   transform: translate(0px, -127px);
+}
+
+#puzzle:hover #puzzle-12 {
+   transform: translate(0px, -127px);
+}
+
+/* sadly this puzzle when reversed (ie. you 
+   stop hovering) does not gracefully exit.
+   I would need to have two transforms, each
+   with their own timing, to get that
+   effect.  As it is it just unwinds itself */

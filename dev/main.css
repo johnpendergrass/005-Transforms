@@ -1,0 +1,419 @@
+/* this project requires CSS3 - 
+   developed and tested on
+   Chrome broswer (windows)
+   only - unsure of how it will 
+   perform on other browsers - 
+   I used generic css terms for all
+   code, rather than the browser
+   specific terminology
+
+   Febrary 2015 --jp--  */
+
+/* START OF COMMON CSS - 
+   THIS IS COMMON TO ALL PAGES -
+   BELOW THIS IS PAGE-SPECIFIC CSS */
+
+html { background: #ddeeee; 
+	 font-family: Georgia, Serif;
+}
+
+
+body {
+	margin: 10px auto 0 auto;
+	padding: 0 0 0 0;
+	width: 1800px;
+	height: 900px;
+	background-color: #ddeeee;
+}
+
+/* header and content within it,
+   including the logo and site-title */
+
+header {
+	position: relative;
+	z-index: 90;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+	width: 1790px;
+	height: 183px;
+	background-color: hsl(0, 0%, 85%);
+	border-bottom: 2px solid hsl(0, 0%, 50%);
+}
+
+#logo {
+	position: relative;
+	z-index: 90;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 300px;
+	height: 183px;
+	background-color: hsl(0, 0%, 85%);
+	box-shadow: 3px 3px 10px hsl(0, 0%, 25%);
+	transform: rotate(-5deg);
+}
+
+#logo-top {  /* blue box */
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 300px;
+	height: 91px;
+	background-color: hsl(210,100%, 80%);
+}
+
+#logo-bottom {  /* green box */
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 300px;
+	height: 92px;
+	background-color: hsl(150, 100%, 80%);
+}
+
+#logo-top h1 {
+	font-family: "Lucida Console", monospace;
+	margin: 0 0 0 0;
+	padding: 15px 0 0 0;
+	text-align: center;
+	font-size: 72px;
+	text-shadow: 2px 2px 8px hsl(0, 0%, 25%);
+}
+
+#logo-bottom h1 {
+	font-family: "Lucida Console", monospace;
+	margin: 0 0 0 0;
+	padding: 45px 0 0 0;
+	text-align: center;
+	font-size: 72px;
+	line-height: 0;
+	text-shadow: 2px 2px 8px hsl(0, 0%, 25%);
+}
+
+/* the 'learning a bit about...' box */
+
+#site-title {
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 1490px;
+	height: 183px;
+	background-color: hsl(0, 0%, 85%);
+}
+
+#site-title h1 {
+	display: inline-block;
+	font-family:  Georgia, serif;
+	margin: 0 0 0 0;
+	padding: 40px 0 0 90px;
+	font-size: 60px;
+	font-weight: lighter;
+	text-align: left;
+	text-shadow: 2px 2px 8px hsl(0, 0%, 50%);
+}
+
+/* the fancy word ('rotate', 'scale', 'translate', 'skew')
+   that is animated in the title */
+
+#title-word { 
+	display: inline-block;
+	font-family:  "Lucida Console", monospace;
+	margin: 0 0 0 0;
+	padding: 30px 0 0 40px;
+	font-size: 60px;
+	text-align: left;
+	text-shadow: 2px 2px 8px hsl(0, 0%, 25%);
+	/* transform, transition specs below should 
+	   work for all types of transforms */
+	transform-origin: center center;
+	transition: all 5s ease;
+}
+
+/* nav menu section - I'm pretty sure that there is
+   a more efficient way to do this menu, but this 
+   works so I'm going with it for now   */
+
+#site-nav {
+	display: block;
+	position: absolute;
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 40px;
+	width: 1450px;
+	height: 50px;
+	top: 133px;
+}
+
+#site-nav ul {
+	list-style-type: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 100px;
+
+}
+
+li { 
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0; 
+	font-family: garamond, serif;
+}
+
+#selected { /* currently selected item in menu */
+	margin: 0 0 0 0;
+	padding: 16px 0 16px 0;
+	width: 125px;
+	text-align: center;
+	font-family: Georgia, serif;
+	font-size: 12px;
+	text-decoration: underline;
+	text-transform: uppercase;
+	color: black;
+}
+
+#site-nav a {  /* nav bar in header */
+	display: inline-block;
+	margin: 0 0 0 0;
+	padding: 16px 0 16px 0px ;
+	width: 125px;
+	text-align: center;
+	font-family: Georgia, serif;
+	font-size: 20px;
+	text-decoration: none;
+	color: hsl(0, 0%, 25%);
+}
+
+a:visited {  /* want to keep nav bar same color regardless */
+	color: hsl(0, 0%, 25%);
+}
+
+/* nav menu items transforms  */
+
+#index {
+	transition: color .5s;
+}
+
+#index:hover {
+	color: hsl(210,100%, 80%);
+}
+
+#rotate {
+	transform: rotate(180deg);
+	transform-origin: center center;
+	transition: all .5s;
+}
+
+#rotate:hover {
+	transform: rotate(0deg);
+}
+
+#scale {
+	transform: scale(1.5);
+	transform-origin: center center;
+	transition: all .5s;
+}
+
+#scale:hover {
+	transform: scale(1.0);
+}
+
+#translate {
+	transform: translate(-25px, -10px);
+	transform-origin: center center;
+	transition: all .5s;
+}
+
+#translate:hover {
+	transform: translate(0px, 0px);
+}
+
+#skew {
+	transform: skew(25deg, 30deg);
+	transform-origin: center center;
+	transition: all .5s;
+}
+
+#skew:hover {
+	transform: skew(0deg, 0deg);
+}
+
+
+/* main section of page */
+
+/* this has three main sections:
+   	1. 	the 'explain' (aks -section-) box
+       	which has some text to eplain what
+       	is going on
+	2. 	the 'main stage' (aka -article-)
+		which has the main demo for that
+		page, and
+	3.	the 'code' area (aka -aside-)
+		which has a small snippet of
+		-html- and -css- code from
+		the main stage demo   */
+
+section {
+	position: relative; 
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+	width: 1790px;
+	height: 640px;
+	background-color: hsl(0, 0%, 85%);
+}
+
+#explain {  /* the gray box on left */
+	overflow: hidden;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 300px;
+	height: 640px;
+	background-color: hsl(0, 0%, 85%);
+}
+
+#explain h1 {
+	margin: 0 0 0 0;
+	padding: 30px 20px 5px 20px;
+	font-family: Georgia, serif;
+	font-size: 48px;
+	text-align: center;
+	color: hsl(0, 0%, 25%);
+	/* transform, transition specs below should 
+	   work for all types of transforms */
+	transform-origin: center center;
+	transition: all 4s cubic-bezier(.95,.25,.46,1.0);
+}
+
+#explain pre {
+	margin: 0 0 0 0;
+	padding: 20px 20px 0 30px;
+	font-family: Georgia, serif;
+	font-size: 16px;
+	line-height: 125%;
+	color: hsl(0, 0%, 25%);
+}
+
+
+/* the 'main-stage' (aka -article-) - 
+   this is the area where the main demo
+   of the page takes place   */
+
+article {  
+	/* set 'position: relative' so
+	   page specific code can position
+	   itself 'absolute' with the 
+	   top left corner of 'article' as 
+	   an anchor */
+    position: relative;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	/* stage dimensions - use this
+	   size for any background 
+	   images, or for moving things
+	   around */
+	width: 900px;
+	height: 640px;
+	/* set generic background color -
+	   will likely be overridden by 
+	   an image in the page specific
+	   css code */
+	background-color: #777777;
+	overflow: hidden;
+}
+
+/* this 'aside' ares is to display snippets
+   of html and css code for the page...
+   Not a detailed look, just enough to get a 
+   sense of syntax  */
+
+aside { /* where code is displayed */
+	position: relative;
+	z-index: 30;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 590px;
+	height: 640px;
+	background-color: hsl(0, 0%, 95%);
+}
+
+#html-code {  /* the blue box */
+	position: relative;
+	z-index: 40;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 590px;
+	height: 320px;
+	background-color: hsl(210, 100%, 80%);
+	transform-origin: center center;
+	transition: all 1s ease-in-out;
+}
+
+
+#css-code {  /* the green box */
+	position: relative;
+	z-index: 50;	
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 590px;
+	height: 320px;
+	background-color: hsl(150, 100%, 80%);
+	transform-origin: center center;
+	transition: all 1s ease-in-out;
+}
+
+aside h1 {
+	margin: 0 0 0 0;
+	padding: 5px 0 10px 5px;
+	display: block;
+	font-family: "Lucida Console", sans-serif;
+	font-size: 18px;
+	text-align: left;
+	color: hsl(0, 0%, 25%);
+}
+
+aside pre {
+	margin: 0 0 0 0;
+	padding: 20px 20px 0 30px;
+	font-family: "Lucida Console", sans-serif;
+	font-size: 15px;
+	line-height: 125%;
+	color: hsl(0, 0%, 25%);
+}
+
+/* footer for page, other links */
+
+footer {
+	margin: 0 auto 0 auto;
+	padding: 20px 0 0 30px;
+	width: 1760px;
+	height: 68px;
+	background-color: hsl(0, 0%, 95%);
+	border-top: 2px solid hsl(0, 0%, 50%);
+}
+
+footer p {
+	display: inline-block;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-family: Georgia, serif;
+	font-size: 16px;
+	color: hsl(0, 0%, 25%);
+}
+
+footer a {
+	display: inline-block;
+	margin: 0 0 0 0;
+	padding: 0 10px 0 5px;
+	font-family: Georgia, serif;
+	font-variant: bold;
+	font-size: 16px;
+	color: hsl(0, 0%, 25%);
+}
+
+/* END OF CSS COMMON TO ALL PAGES -  */
+
+/* Note: each page of this project also has it's own
+   CSS page (ie. rotate.css, translate.css, etc) that
+   applies css to specific things on that page  */
+

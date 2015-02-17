@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<!-- this project requires html5 - developed and 
+	 tested on Chrome broswer (windows); have tested in 
+	ie11 and FF and it seems to work fine, but... 
+-->
+
+<head>
+	<title>laba SKEW</title>
+	<!-- index.css is page layout for css common to all pages -->
+	<link rel="stylesheet" href="main.css">
+	<!-- xxxxxx.css is page layout for css to just this page  --> 
+	<link rel="stylesheet" href="skew.css">
+</head>
+
+<body>
+
+	<header> <!-- logo, title, menu of page -->
+
+		<div id="logo">
+			<div id="logo-top">
+				<h1>html5</h1>
+			</div>
+
+			<div id="logo-bottom">
+				<h1>css3</h1>
+			</div>
+		</div>
+
+		<div id="site-title">
+			<h1>Learning a bit about...</h1><h2 id="title-word">skew</h2>
+			
+			<nav id="site-nav">
+				<ul>
+					<li><a id="index" href="index.html">Home</a></li>
+					<li><a id="rotate" href="rotate.html">Rotate</a></li>
+					<li><a id="scale" href="scale.html">Scale</a></li>
+					<li><a id="translate" href="translate.html">Translate</a></li>
+					<li id="selected">Skew</li>
+				</ul>
+			</nav>
+		</div>
+
+	</header>
+
+	<section>  <!-- middle section of page where the action takes place -->
+		
+		<aside id="explain">  <!-- box on left where stuff is explained -->
+			<h1>SKEW</h1>
+			
+			<pre>
+Most of these effects work fine on 
+modern browsers.  Some seem a bit
+flakey, strangely enough mainly
+on Firefox.  IE seems good.  This
+project was developed on Chrome,
+in Feb 2015, so that is the browser
+era it is designed for.
+
+The -skew- effect gets very bizarre
+when pushed past it's normal use.
+Getting above -45deg- on either
+axis generates strange stuff.
+See the title word -skew- for an
+example.
+
+This starship demo uses all the 
+transforms - rotate, scale,
+translate and skew.  Skew is used
+modestly to help 'flatten' out the 
+fleet as it goes faster - 
+to warp perhaps?
+			</pre>
+			
+		</aside>
+
+		<article id="main-stage"> <!-- main demo area in middle of page -->
+
+			<!-- the 16 enterprises below use only two distinct imaages (left and right version).  I load
+			     each image eight times.  Because every one must have a unique -id- so I can position and
+			     move it in css.  There must be a way to cache these images so that each image only needs
+			     to load once?  something like:
+
+			     <img id="enterprise1" id="enterprise3" ...etc... src="../../enterprise-galaxy-right.png" ...>
+
+			     where each -img- gets multiple -id's-.  Doesn't look possible.  Does browser cache each
+			     image anyway?  Maybe not as bad as it seems.  -->
+
+			<img id="enterprise10" class="ship-right" src="../resources/skew/enterprise-galaxy-left-500x371.png" alt="enterprise">
+			<img id="enterprise11" class="ship-left" src="../resources/skew/enterprise-galaxy-right-500x371.png" alt="enterprise">
+			<img id="enterprise12" class="ship-right" src="../resources/skew/enterprise-galaxy-left-500x371.png" alt="enterprise">
+			<img id="enterprise13" class="ship-left" src="../resources/skew/enterprise-galaxy-right-500x371.png" alt="enterprise">
+			<img id="enterprise14" class="ship-right" src="../resources/skew/enterprise-galaxy-left-500x371.png" alt="enterprise">
+			<img id="enterprise15" class="ship-left" src="../resources/skew/enterprise-galaxy-right-500x371.png" alt="enterprise">
+			<img id="enterprise16" class="ship-right" src="../resources/skew/enterprise-galaxy-left-500x371.png" alt="enterprise">
+
+			<!-- I put the large enterprise here in the middle of the fleet of smaller enterprises so that the large 
+		     enterprise would appear above #10-16, but below #1-9, trying for a sense of depth.  It worked fairly well actually.  -->
+		     <img id="enterprise-down" src="../resources/skew/enterprise-strait-down-500x700.png" alt="enterprise">
+
+			<img id="enterprise1" class="ship-left" src="../resources/skew/enterprise-galaxy-right-500x371.png" alt="enterprise">
+			<img id="enterprise2" class="ship-right" src="../resources/skew/enterprise-galaxy-left-500x371.png" alt="enterprise">
+			<img id="enterprise3" class="ship-left" src="../resources/skew/enterprise-galaxy-right-500x371.png" alt="enterprise">
+			<img id="enterprise4" class="ship-right" src="../resources/skew/enterprise-galaxy-left-500x371.png" alt="enterprise">
+			<img id="enterprise5" class="ship-left" src="../resources/skew/enterprise-galaxy-right-500x371.png" alt="enterprise">
+			<img id="enterprise6" class="ship-right" src="../resources/skew/enterprise-galaxy-left-500x371.png" alt="enterprise">
+			<img id="enterprise7" class="ship-left" src="../resources/skew/enterprise-galaxy-right-500x371.png" alt="enterprise">
+			<img id="enterprise8" class="ship-right" src="../resources/skew/enterprise-galaxy-left-500x371.png" alt="enterprise">
+			<img id="enterprise9" class="ship-left" src="../resources/skew/enterprise-galaxy-right-500x371.png" alt="enterprise">
+
+		</article>
+
+		<aside id="code">  <!-- box on right side where snippets of -html- and -css- code are displayed -->
+
+			<div id="html-code">
+				<h1>html5 snippet</h1>
+				
+				<pre>
+&ltarticle id="main-stage"&gt
+
+  &lt!-- load all the enterprises - load the big one
+       in the middle so that it will appear in 
+       front of some, and behind others --&gt
+
+      ...
+  &ltimg id="ent16" class="ship-left" src="en-left.png"&gt
+      ...
+  &ltimg id="ent-down" src="ent-down.png"&gt
+      ... 
+  &ltimg id="ent3" class="ship-left" src="ent-left.png"&gt
+      ...
+&lt/article&gt
+				</pre>
+
+			</div>
+
+			<div id="css-code">
+				<h1>css3 snippet</h1>
+				
+				<pre>
+/* all left facing ships start at same place */
+/* (right facing have a similar .ship-right) */
+
+.ship-left {  /* odd numbered ships common specs */
+   position: absolute;
+   top: 700px;
+   left: -350px;
+   transform-origin: center center;
+   transform: skew(0deg) rotate(0deg);
+}
+
+#ent3  { transition: transform 3s ease-in 1.5s; }
+
+				</pre>
+
+			</div>
+
+		</aside>
+
+	</section>
+
+	<footer>  <!-- footer, huh? -->
+		<p>--jp-- Feb 2015, Experimental project #005</p>
+		<br>
+		<p>For more information, go to the</p><a href="about.html">&nbspABOUT&nbsp</a><p>page.</p>
+	</footer>
+
+
+</body>
